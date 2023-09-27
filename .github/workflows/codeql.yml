@@ -70,7 +70,7 @@ jobs:
     #    lfs: 'true'
 
     - name: Build Mave Packages
-      run: ./mvnw clean -B package -f pom.xml
+      run: mvn clean -B package -f pom.xml
       #env:
       #  ACCESS_TOKEN: ${{ secrets.PACKAGES }}
 
