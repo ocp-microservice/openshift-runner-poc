@@ -47,7 +47,7 @@ jobs:
     - run: codeql version --format=json
     - run: codeql resolve languages --format=betterjson --extractor-options-verbosity=4 --extractor-include-aliases
     - run: codeql resolve queries java-code-scanning.qls --format=bylanguage
-    - run: codeql database init --db-cluster /home/runner/_work/_temp/codeql_databases --source-root=/home/runner/_work/openshift-runner-poc/openshift-runner-poc --language=java --begin-tracing --trace-process-name=Runner.Worker.exe --codescanning-config=/home/runner/_work/_temp/user-config.yaml --calculate-language-specific-baseline
+    - run: codeql database init --db-cluster /home/runner/_work/_temp/codeql_databases --source-root=/home/runner/_work/openshift-runner-poc/openshift-runner-poc --language=java --begin-tracing --trace-process-name=Runner.Worker.exe --calculate-language-specific-baseline
     
     # Download and setup java
     #- name: setup java
