@@ -44,6 +44,7 @@ jobs:
         # Details on CodeQL's query packs refer to : https://docs.github.com/en/code-security/code-scanning/automatically-scanning-your-code-for-vulnerabilities-and-errors/configuring-code-scanning#using-queries-in-ql-packs
         # queries: security-extended,security-and-quality
     # CodeQL version
+    - run: codeql resolve qlpacks
     - run: codeql version --format=json
     - run: codeql resolve languages --format=betterjson --extractor-options-verbosity=4 --extractor-include-aliases
     - run: codeql resolve queries java-code-scanning.qls --format=bylanguage
